@@ -1,0 +1,35 @@
+.header {
+  height: 120px;
+  padding: 20px 50px;
+  background-color: #013745ce; // This is the color we'll use for the bar chart
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-form-field {
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+  }
+
+  .material-icons.color_white {
+    color: #FFFFFF;
+  }
+}

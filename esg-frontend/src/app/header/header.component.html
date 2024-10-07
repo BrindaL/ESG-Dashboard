@@ -1,0 +1,15 @@
+<header class="header">
+  <h1>ESG Dashboard</h1>
+  <div>
+    <mat-form-field>
+      <mat-label>Select a company</mat-label>
+      <mat-select [(ngModel)]="selectedCompany" (selectionChange)="onCompanyChange($event)">
+        <mat-option *ngFor="let company of companies" [value]="company">{{ company }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-icon-button (click)="onImportClick()">
+      <mat-icon class="material-icons color_white">file_upload</mat-icon>
+    </button>
+  </div>
+</header>

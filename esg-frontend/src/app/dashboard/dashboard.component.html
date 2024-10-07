@@ -1,0 +1,29 @@
+<div class="container">
+  <app-header (companySelected)="onCompanySelected($event)" (importClicked)="triggerFileInput()"></app-header>
+  <input #fileInput type="file" (change)="onFileSelected($event)" style="display: none;" accept=".csv">
+
+  <div class="main-container">
+
+    <div class="main">
+      <div class="dashboard-container">
+        <div class="dashboard-header">
+          <h2>ESG Metrics for {{ companyName }}</h2>
+        </div>
+
+        <div class="chart-container">
+          <button mat-icon-button (click)="showCompanyDetails()">
+            <mat-icon>info</mat-icon>
+          </button>
+          <button mat-icon-button (click)="exportToCsv()">
+            <mat-icon>file_download</mat-icon>
+          </button>
+
+          <div>
+            <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions" [type]="chartType">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
